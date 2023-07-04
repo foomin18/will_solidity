@@ -27,7 +27,7 @@ contract Coin { //coinを作れるのは開発者だけCoinはaccountどうし�
         }
         balances[msg.sender] -= amount;
         balances[reciever] += amount;
-        emit Sent(msg.sender, reciever, amount);
+        emit Sent(msg.sender, reciever, amount);  //emitでeventを送信
     }
 
     function seeToken(address account) public returns(uint) { //balancesをpublicにしてるので別にいらない
